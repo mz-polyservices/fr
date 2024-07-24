@@ -64,7 +64,7 @@
 
 .foot svg text.text-body-1 {
   /* stroke: var( --loader-text-color); */
-  stroke: rgb(255, 255, 255);
+  stroke: aliceblue;
   
 
 }.foot{
@@ -79,7 +79,7 @@
     flex-direction: column;
    
     align-items: center;
-    background-color: white;
+    background-color: aliceblue;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
     & #hero-vid{
@@ -105,17 +105,19 @@
 
     }
 }#header{
-    height: 10vh;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 5vw;
-    padding-left: 5vw;
-    color: white;
-    & i {
-        font-size: 48px;
-    }
+  z-index: 2;
+  position: relative;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  color: aliceblue;
+  & i {
+      font-size: 48px;
+  }
 }
 
 
@@ -151,29 +153,6 @@
     line-height: 50px;
   }
 
-  .triangle-decoration {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 50px 50px 0 0;
-    border-color: #000 transparent transparent transparent;
-    z-index: 1;
-  }
-  .triangle-decoration2 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 50px 50px;
-    border-color: transparent transparent #000 transparent;
-    z-index: 1;
-  }
-
   #sub-hero-title{
     color: black;
     display: flex;
@@ -196,34 +175,14 @@
     height: 80px;
     font-size: 2rem;
     background-color: #000;
-    color: white;
+    color: aliceblue;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px 0 20px 0;
   }
-  .triangle-decoration3 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 20px 20px 0;
-    border-color: transparent white transparent transparent;
-    z-index: 1;
-  }
-  .triangle-decoration4 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 20px 0 0 20px;
-    border-color: transparent transparent transparent white;
-    z-index: 1;
-  }
+ 
   #first-section{
     padding: 0 5vw;
     width: 100vw;
@@ -233,7 +192,7 @@
     background-color: #000;
     z-index: 2;
     & h1{
-      color: white;
+      color: aliceblue;
       text-align: center;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
@@ -256,7 +215,7 @@
     justify-content: space-between;
     height: 80px;
     max-width: calc(90vw/5);
-    color: white;
+    color: aliceblue;
     & p{
       margin: 0;
       text-align: center;
@@ -267,7 +226,7 @@
     width: 100vw;
     height: fit-content;
     padding: 1rem 5vw;
-    color: white;
+    color: aliceblue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -276,7 +235,7 @@
     z-index: 2;
     overflow: hidden;
     & h1{
-      color: white;
+      color: aliceblue;
       text-align: center;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
@@ -298,7 +257,7 @@
   }.sec{
     width: 80vw;
     height: fit-content;
-    background-color: white;
+    background-color: aliceblue;
     color: #000;
     display: flex;
     flex-direction: column;
@@ -319,7 +278,7 @@
     margin: auto;
     padding: 1rem 5vw;
     color: black;
-    background-color: white;
+    background-color: aliceblue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -351,7 +310,7 @@
   .logos {
     overflow: hidden;
     padding: 10px 0;
-    background: white;
+    background: aliceblue;
     white-space: nowrap;
     position: relative;
   }
@@ -383,7 +342,7 @@
   }
 
   #fourth-section{
-    background-color: white;
+    background-color: aliceblue;
     color: #000;
     position: fixed;
     bottom: 0;
@@ -399,7 +358,7 @@
     height: 5vh;
     width: 100%;
     background-color: #000;
-    color: white;
+    color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -446,4 +405,23 @@
     100% {
       transform: rotate(360deg);
     }
+  }
+
+
+  #desktop-message {
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+     & svg{
+      height: 50vh;
+     }
   }

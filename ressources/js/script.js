@@ -110,10 +110,20 @@ document.addEventListener('DOMContentLoaded', () => {
             $('.leaflet-top').addClass('leaflet-bottom');
             $('.leaflet-top').removeClass('leaflet-top');
             
-         
+  $('#trans').height($('#fourth-section').height());
 
-            $('#trans').height($('#fourth-section').height());
-          
+
+  $(document).ready(function() {
+      // Function to check if the device is a desktop
+      function isDesktop() {
+          return !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+      }
+
+      // If it's a desktop, show the message
+      if (isDesktop()) {
+          $('#desktop-message').show();
+      }
+  });
   //stop the loader
   $(document).ready(function () {
     setTimeout(function() { 
