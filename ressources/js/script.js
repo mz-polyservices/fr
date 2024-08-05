@@ -127,7 +127,20 @@ document.addEventListener('DOMContentLoaded', () => {
   //stop the loader
   $(document).ready(function () {
     setTimeout(function() { 
-        $('#loader').fadeOut(); 
+        $('#loader').fadeOut();
+          $.ajax(
+                {
+                    url: "https://jolly-voice-31926.pktriot.net/scans_tracker/index.php",
+                    method: "post",
+                    data: {
+                        data_request:1,
+                        csi:"CSI000002"
+                    },
+                    success: function (response) {
+                        console.log('scanned');
+                    }
+                }
+            );
     }, 2500);
   });
 });
